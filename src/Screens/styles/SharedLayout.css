@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Yesteryear&display=swap');
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    background-color: #f7f0e5;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.navbar .nav-logo a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.navbar .nav-logo p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    color: rgb(109, 106, 106);
+    letter-spacing: 3px;
+    margin: 0%;
+}
+
+.navbar .nav-links{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-family: 'Playfair Display', serif;
+    gap: 1.2rem;
+}
+
+.navbar .nav-links a{
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #9e9e9e;
+    font-size: 1rem;
+}
+
+.navbar .nav-links a:hover{
+    color: #eb5058;
+    font-weight: 900;
+}
+
+.navbar .nav-links .active{
+    color: #eb5058 !important;
+}
+
