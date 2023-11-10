@@ -335,3 +335,137 @@
     bottom: -30%;
     z-index: 101;
 }
+
+.home-rating{
+    width: 100%;
+    height: 150vh;
+    background-image:
+    linear-gradient(to bottom, rgba(194, 194, 189, 0.52), rgba(190, 190, 186, 0.52)),
+    url('../images/rating-bg1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.home-rating .container{
+   width: 800px;
+   text-align: center;
+}
+
+.home-rating .container .stars{
+    margin: 3rem;
+    padding: 2rem;
+}
+
+.home-rating .container .stars i{
+    color: #ffcc00;
+    font-size: 3rem;
+}
+
+.home-rating .container h1{
+    font-family: 'Oswald', sans-serif;
+    margin: 1rem 0;
+    letter-spacing: 1.3px;
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+
+.home-rating .container img{
+    width: 80px;
+    height: 1.5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.home-rating .container p{
+    font-family: 'Yesteryear', cursive;
+    text-transform: lowercase;
+    font-size: 2.4rem;
+    font-weight: lighter;
+    margin: 3.5rem 0;
+    color: #ef0612;
+    text-shadow: black;
+}
+
+.home-rating .container span{
+    color: black;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    
+}
+
+.home-rating .reddash{
+    position: absolute;
+    width: 1px;
+    height: 100px;
+    right: 50%;
+    bottom: -4%;
+    z-index: 101;
+}
+
+.reservation{
+    background-color: #f7f0e5;
+    width: 100%;
+    height: 145vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reservation .image{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reservation .context{
+    width: 720px;
+    text-align: center;
+}
+
+.reservation .context h2{
+    font-family: 'Yesteryear', cursive;
+    text-transform: lowercase;
+    font-size: 2.4rem;
+    font-weight: lighter;
+    margin: 2rem 0;
+}
+
+.reservation .context h1{
+    font-family: 'Oswald', sans-serif;
+    margin: 1rem 0;
+    letter-spacing: 1.3px;
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+
+.reservation .context a{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    color: #eb5058;
+    border: 1px solid #eb5058;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.rem;
+    font-weight: 900;
+    text-decoration: none;
+    margin: 3rem;
+    padding: 10px 25px;
+}
+
+.reservation .context a:hover{
+    background-color: #eb5058;
+    color: white;
+}

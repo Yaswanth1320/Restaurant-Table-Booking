@@ -2,6 +2,7 @@ import React from "react";
 import "./styles/SharedLayout.css";
 import { Outlet } from "react-router";
 import { NavLink } from "react-router-dom";
+import Footer from "./Footer";
 
 function SharedLayout() {
   return (
@@ -21,6 +22,7 @@ function SharedLayout() {
       <main>
         <Outlet />
       </main>
+      <Footer/>
     </>
   );
 }
