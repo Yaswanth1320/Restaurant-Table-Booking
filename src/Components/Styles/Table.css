@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Playfair:opsz@5..1200&display=swap');
+
+.main-container{
+    font-family: 'Playfair Display', serif;
+    margin: 1rem;
+    padding: 1rem;
+    width: inherit;
+    height: auto;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container .card{
+    width: 800px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem;
+    background: rgb(253, 247, 238);
+    box-shadow: 0 8px 32px 0 rgba(13, 14, 22, 0.3);
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.card-container .card .preview{
+    width: 350px;
+    height: auto;
+}
+
+.card-container .card .card-content{
+    width: 400px;
+    height: auto;
+}
+
+.card-container .card .card-content h1{
+    font-size: 1.7rem;
+    padding: 0 0.5rem;
+    text-align: left;
+    font-weight: 900;
+}
+
+.card-container .card .card-content p{
+    font-family: 'Playfair', serif;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.5rem;
+    margin: 0 !important;
+}
+
+.card-container .card .card-content span{
+    color: black;
+    font-weight: bolder;
+}
+.card .card-content .button .btn{
+    float: right;
+    background: transparent;
+    border: 1px solid #eb5058;
+    color: #eb5058;
+    border-radius: 0 !important;
+}
+
+.card .card-content .button .btn:hover{
+    background: #eb5058;
+    color: white;
+}
+
+
+

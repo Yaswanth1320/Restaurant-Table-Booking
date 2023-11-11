@@ -15,9 +15,9 @@ function Footer() {
         <h3>Address</h3>
         <p>13 Fifth Avenue, New York</p>
         <div className="social">
-            <Link to='/'><i class="fa-brands fa-facebook"></i></Link>
-            <Link to='/'><i class="fa-brands fa-twitter"></i></Link>
-            <Link to='/'><i class="fa-brands fa-google"></i></Link>
+            <Link to='/'><i className="fa-brands fa-facebook"></i></Link>
+            <Link to='/'><i className="fa-brands fa-twitter"></i></Link>
+            <Link to='/'><i className="fa-brands fa-google"></i></Link>
         </div>
       </div>
       <div className="copyrights">

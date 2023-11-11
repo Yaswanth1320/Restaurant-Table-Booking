@@ -16,7 +16,7 @@ function Home() {
         <div className="home-content">
           <h2>Delightfull Experience</h2>
           <h1>Welcome to 'Retro Restaurant'</h1>
-          <Link to="/" className="home-button">
+          <Link to="book" className="home-button">
             Reservation
           </Link>
         </div>
@@ -113,11 +113,11 @@ function Home() {
       <div className="home-rating">
         <div className="container">
           <div className="stars">
-          <i class="fa-solid fa-star"></i>{'     '}
-          <i class="fa-solid fa-star"></i>{'     '}
-          <i class="fa-solid fa-star"></i>{'     '}
-          <i class="fa-solid fa-star"></i>{'     '}
-          <i class="fa-solid fa-star"></i>{'     '}
+          <i className="fa-solid fa-star"></i>{'     '}
+          <i className="fa-solid fa-star"></i>{'     '}
+          <i className="fa-solid fa-star"></i>{'     '}
+          <i className="fa-solid fa-star"></i>{'     '}
+          <i className="fa-solid fa-star"></i>{'     '}
           </div>
           <h1>Our Customers Fall In Love With Us</h1>
           <img src={black} alt="dash" />
@@ -137,7 +137,7 @@ function Home() {
         <div className="context">
             <h2>join us</h2>
             <h1>Book A Table Now, Come And See Us</h1>
-            <Link to='/'>Reservation</Link>
+            <Link to='book'>Reservation</Link>
         </div>
       </div>
       
