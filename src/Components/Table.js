@@ -2,7 +2,9 @@ import React from "react";
 import "./Styles/Table.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import Carousel from "react-bootstrap/Carousel";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Table({ table }) {
   const [show, setShow] = useState(false);
@@ -34,19 +36,32 @@ function Table({ table }) {
           <button className="btn" onClick={handleShow}>
             View Details
           </button>
-          <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
+          <Link to={`/book/${table._id}`}><Button className="btn">Book now</Button></Link>
+          <Modal show={show} onHide={handleClose} size="lg">
+            <Modal.Header >
+              <Modal.Title>{table.name}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              Woohoo, you are reading this text in a modal!
+              <Carousel>
+                {table.imgUrls.map((url) => {
+                  return (
+                    <Carousel.Item key={url}>
+                      <img
+                        src={url}
+                        width="800px"
+                        height="450px"
+                        alt="Slide"
+                        className="modalImg"
+                      />
+                    </Carousel.Item>
+                  );
+                })}
+              </Carousel>
+              <h6 className="mt-2">{table.desc}</h6>
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={handleClose}>
                 Close
-              </Button>
-              <Button variant="primary" onClick={handleClose}>
-                Save Changes
               </Button>
             </Modal.Footer>
           </Modal>

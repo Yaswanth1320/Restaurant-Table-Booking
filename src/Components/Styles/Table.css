@@ -5,7 +5,8 @@
     margin: 1rem;
     padding: 1rem;
     width: inherit;
-    height: auto;
+    min-height: 100vh;
+    max-height: auto;
 }
 
 .card-container{
@@ -62,6 +63,9 @@
 }
 .card .card-content .button .btn{
     float: right;
+    cursor: pointer;
+    outline: none;
+    margin-left: 1rem;
     background: transparent;
     border: 1px solid #eb5058;
     color: #eb5058;

@@ -3,12 +3,13 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Table from './Table';
 import './Styles/Table.css'
+import Loader from './Spinner/Loader';
+import Error from './Spinner/Error';
 
 function Booking() {
 
   const [tables,setTables] = useState([]);
   const [loading,setLoading] = useState();
-  const [error, setError] = useState();
 
     useEffect(() => {
 
@@ -19,8 +20,6 @@ function Booking() {
                 setTables(data)
                 setLoading(false)
             } catch (error) {
-                setError(true)
-                console.log(error)
                 setLoading(false)
             }
         }
@@ -32,10 +31,9 @@ function Booking() {
     <div className='main-container'>
       <div className="card-container">
       {
-        loading ? (<p>Loading...</p>) : error ? (<p>Error!</p>) : (tables.map(table =>{
-          return <Table table={table}/>
-
-        }))
+        loading ? (<p><Loader/></p>) : tables.length > 1 ? (tables.map(table =>{
+          return <Table key={table._id} table={table}/>
+        })) : <Error/>
       }
       </div>
     </div>

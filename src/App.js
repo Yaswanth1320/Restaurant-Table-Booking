@@ -11,15 +11,19 @@ import {
 import Help from './Components/Help';
 import Login from './Components/Login';
 import Booking from './Components/Booking';
+import BookingScreen from './Screens/BookingScreen';
+import Signup from './Components/Signup';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<SharedLayout />}>
         <Route index element={<Home />} />
         <Route path='about' element={<About />} />
-        <Route path='book' element={<Booking />} />
+        <Route  path='book' element={<Booking />} />
+        <Route path="/book/:id" element={<BookingScreen/>} />
         <Route path='help' element={<Help />} />
         <Route path='login' element={<Login />} />
+        <Route path='signup' element={<Signup />} />
     </Route>
   )
 )

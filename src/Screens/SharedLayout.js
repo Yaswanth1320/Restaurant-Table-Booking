@@ -10,7 +10,7 @@ function SharedLayout() {
       <nav className="navbar">
         <div className="nav-logo">
           <NavLink to="/">Retro</NavLink>
-          <p>Resturant</p>
+          <p>Resturants</p>
         </div>
         <div className="nav-links">
           <NavLink to="/">Home</NavLink>
@@ -20,7 +20,7 @@ function SharedLayout() {
           <NavLink to="login">Login</NavLink>
         </div>
       </nav>
-      <main>
+      <main className="outlet">
         <Outlet />
       </main>
       <Footer/>
