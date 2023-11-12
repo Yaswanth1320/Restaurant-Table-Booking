@@ -1,0 +1,313 @@
+
+.contact-heading{
+    width: 100%;
+    height: 65vh;
+    background-image:
+    linear-gradient(to bottom, rgba(58, 57, 57, 0.52), rgba(58, 57, 57, 0.52)),
+    url('../images/contact.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contact-heading h1{
+    text-align: center;
+    font-size: 4.5rem;
+    font-family: 'Orbitron', sans-serif;
+    color: beige;
+}
+
+.contact-heading .reddash{
+    position: absolute;
+    width: 1px;
+    height: 100px;
+    right: 50%;
+    bottom: -11%;
+    z-index: 101;
+}
+
+.contact-middle{
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contact-middle .join{
+    background-color: #f6f3f1;
+    width: 50%;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-middle .contact{
+    background-color: #dedcdb;
+    width: 50%;
+    height: 150vh;
+}
+
+.contact-middle .join .join-content{
+    height: auto;
+    text-align: center;
+    width: 440px;
+}
+
+.contact-middle .join .join-content h2{
+    font-family: 'Yesteryear', cursive;
+    text-transform: lowercase;
+    font-size: 2.4rem;
+    font-weight: lighter;
+    margin: 2rem 0;
+}
+
+.contact-middle .join .join-content h1{
+    font-family: 'Oswald', sans-serif;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+    font-size: 3rem;
+}
+
+.contact-middle .join .join-content img{
+     width: 70px;
+    height: 1px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-middle .join .join-content p{
+    line-height: 2;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: gray;
+    margin-bottom: 1rem;
+}
+
+.contact-middle .timings{
+    margin: 7rem;
+}
+
+.contact-middle .timings h3{
+    line-height: 2;
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: gray;
+    margin-bottom: 1rem;
+}
+
+.contact-middle .contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-middle .contact .contact-content{
+    height: auto;
+    text-align: center;
+    width: 440px;
+}
+
+.contact-middle .contact .contact-content h2{
+    font-family: 'Yesteryear', cursive;
+    text-transform: lowercase;
+    font-size: 2.4rem;
+    font-weight: lighter;
+    margin: 2rem 0;
+}
+
+.contact-middle .contact .contact-content h1{
+    font-family: 'Oswald', sans-serif;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+    font-size: 3rem;
+}
+
+.contact-middle .contact .contact-content img{
+    width: 70px;
+    height: 1px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-middle .contact .contact-content p{
+    line-height: 2;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: gray;
+    margin-bottom: 1rem;
+}
+
+.contact-middle .contact .contact-content h3{
+    font-family: 'Oswald', sans-serif;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+.contact .extra{
+    margin: 7rem;
+    text-align: center;
+}
+
+.contact .extra p{
+    line-height: 2;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: gray;
+    margin-bottom: 1rem;
+}
+
+.contact .extra h1{
+    font-family: 'Oswald', sans-serif;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    color: #eb5058;
+}
+
+.contact .extra p{
+    line-height: 2;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: gray;
+    margin-top: 2rem;
+}
+
+.contact .extra h2{
+    font-family: 'Oswald', sans-serif;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
+
+.contact-middle .reddash{
+    position: absolute;
+    width: 1px;
+    height: 100px;
+    right: 50%;
+    bottom: -4.5%;
+    z-index: 101;
+}
+
+.contact-form{
+    width: 100%;
+    height: 130vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-form h2{
+    font-family: 'Yesteryear', cursive;
+    text-transform: lowercase;
+    font-size: 2.4rem;
+    font-weight: lighter;
+    margin: 2rem 0;
+}
+
+.contact-form h1{
+    font-family: 'Oswald', sans-serif;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+    font-size: 3rem;
+}
+
+.contact-form img{
+    width: 70px;
+    height: 1px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-form .form{
+    margin: 2rem;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .form input{
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: gray;
+    background-color: white;
+    outline: none;
+}
+
+
+.contact-form .form textarea{
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: gray;
+    background-color: white;
+    outline: none;
+}
+
+.contact-form button{
+    padding: 0.8rem 3rem;
+    border: 1px solid #eb5058;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #eb5058;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+}
+
+.contact-form button:hover{
+    background-color: #eb5058;
+    color: white;
+}
+
+.contact-form .reddash{
+    position: absolute;
+    width: 1px;
+    height: 100px;
+    right: 50%;
+    bottom: -11%;
+    z-index: 101;
+}
+
+.contact-last{
+    width: 100%;
+    height: 70vh;
+    background-image:
+    linear-gradient(to bottom, rgba(58, 57, 57, 0.52), rgba(58, 57, 57, 0.52)),
+    url('../images/contact1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.contact-last .reddash{
+    position: absolute;
+    width: 1px;
+    height: 100px;
+    right: 50%;
+    bottom: -10%;
+    z-index: 101;
+}

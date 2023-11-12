@@ -7,12 +7,12 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,RouterProvider} 
-   from 'react-router-dom'
-import Help from './Components/Help';
+   from 'react-router-dom';
 import Login from './Components/Login';
 import Booking from './Components/Booking';
 import BookingScreen from './Screens/BookingScreen';
 import Signup from './Components/Signup';
+import Contact from './Components/Contact';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,7 +21,7 @@ const router = createBrowserRouter(
         <Route path='about' element={<About />} />
         <Route  path='book' element={<Booking />} />
         <Route path="/book/:id" element={<BookingScreen/>} />
-        <Route path='help' element={<Help />} />
+        <Route path='contact' element={<Contact />} />
         <Route path='login' element={<Login />} />
         <Route path='signup' element={<Signup />} />
     </Route>

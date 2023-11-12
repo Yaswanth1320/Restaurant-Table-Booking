@@ -16,7 +16,7 @@ function SharedLayout() {
           <NavLink to="/">Home</NavLink>
           <NavLink to="about">About</NavLink>
           <NavLink to="book">Booking</NavLink>
-          <NavLink to="help">Help</NavLink>
+          <NavLink to="contact">Contact</NavLink>
           <NavLink to="login">Login</NavLink>
         </div>
       </nav>
