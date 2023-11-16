@@ -1,5 +1,5 @@
 import React from 'react'
-import RingLoader from "react-spinners/RingLoader";
+import ScaleLoader from "react-spinners/ScaleLoader";
 import { useState } from 'react';
 
 
@@ -8,7 +8,7 @@ function Loader() {
 
   return (
     <div style={{'margin-top': '10rem'}}>
-      <RingLoader
+      <ScaleLoader
         color='#eb5058'
         loading={loading}
         size={150}

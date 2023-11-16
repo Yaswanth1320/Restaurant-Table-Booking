@@ -23,7 +23,7 @@
     justify-content: space-between;
     margin: 1rem;
     padding: 1rem;
-    background: rgb(253, 247, 238);
+    background: #fdf7ee;
     box-shadow: 0 8px 32px 0 rgba(13, 14, 22, 0.3);
     backdrop-filter: blur( 1.5px );
     -webkit-backdrop-filter: blur( 1.5px );

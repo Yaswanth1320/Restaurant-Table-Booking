@@ -1,5 +1,82 @@
-
-.booking{
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond&family=Playfair+Display&display=swap');
+.booking-container{
     width: 100%;
-    min-height: 100vh;
+    background-color: white;
+    min-height: 90vh;
+    max-height: fit-content;
+    padding: 3rem;
+    
+}
+
+.booking-container .booking{
+    width: 100%;
+    background-color: whitesmoke;
+    box-shadow: 0 8px 32px 0 rgba(13, 14, 22, 0.3);
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 2rem 2rem;
+    
+}
+.booking-container .booking .booking-image{
+    width: 40%;
+}
+
+.booking-container .booking .booking-image img{
+    width: 100%;
+}
+
+.booking-container .booking .booking-image h3{
+    font-size: 2em;
+    font-family: 'Abril Fatface', serif;
+    font-weight: 100;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.booking-container .booking .booking-content{
+    width: 55%;
+    text-align: right;
+}
+
+.booking-container .booking .booking-content h3{
+    font-size: 2em;
+    font-family: 'Abril Fatface', serif;
+    font-weight: 100;
+}
+
+.booking-container .booking .booking-content p{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 900;
+    color: black;
+    font-size: 1.3rem;
+    margin-bottom: 4px !important;
+}
+.booking-container .booking .booking-content p span{
+    color: gray;
+    font-size: 1.2rem;
+}
+
+.booking-container .booking .booking-content h4{
+    font-family: 'Abril Fatface', serif;
+}
+
+.booking-container .booking .booking-content button{
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    padding: 0.4rem 1rem;
+    border: 1px solid #eb5058;
+    color: #eb5058;
+    background-color: transparent;
+}
+
+
+.booking-container .booking .booking-content button:hover{
+    color: white;
+    background-color: #eb5058;
 }
