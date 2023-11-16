@@ -4,7 +4,6 @@
 
 .navbar{
     display: flex;
-    flex-direction: column;
     width: 100%;
     font-family: 'Playfair Display', serif;
     background-color: #f7f0e5;
@@ -12,6 +11,7 @@
 
 .nav-logo{
     display: flex;
+    margin-left: 2rem;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +21,7 @@
 .navbar .nav-logo a{
     text-decoration: none;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: black;
     text-align: center;
     text-transform: uppercase;
@@ -30,27 +30,26 @@
 .navbar .nav-logo p{
     text-align: center;
     text-transform: uppercase;
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     color: rgb(109, 106, 106);
     letter-spacing: 3px;
     margin: 0%;
 }
 
 .navbar .nav-links{
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem;
     font-family: 'Playfair Display', serif;
-    gap: 1.2rem;
+    gap: 1.1rem;
 }
 
 .navbar .nav-links a{
     margin: 0 1rem;
     text-decoration: none;
     color: #9e9e9e;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 900;
 }
 
@@ -61,5 +60,33 @@
 
 .navbar .nav-links .active{
     color: #eb5058 !important;
+}
+
+.login-user{
+    border: none;
+    outline: none;
+    padding: 0.5rem 2rem;
+    border-radius: 30px;
+    color: #eb5058;
+    border: 1px solid #eb5058;
+    font-size: 1.1rem;
+    
+}
+
+.login-user:hover{
+    background-color: #eb5058;
+    color: white;
+    
+}
+
+.login-user i{
+    margin-right: 0.5rem;
+}
+
+.dropdown-menu .user-drop{
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center;
+    font-size: 1rem;
 }
 

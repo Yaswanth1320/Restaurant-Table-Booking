@@ -158,7 +158,13 @@
 .login-container .login .form .links a:hover{
     color: #eb5058;
 }
-
+.intial{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
 
 

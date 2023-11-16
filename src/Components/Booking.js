@@ -30,10 +30,18 @@ function Booking() {
   return (
     <div className='main-container'>
       <div className="card-container">
+        
       {
-        loading ? (<p><Loader/></p>) : tables.length > 1 ? (tables.map(table =>{
-          return <Table key={table._id} table={table}/>
-        })) : <Error/>
+        loading ? (<p><Loader/></p>) : tables.length > 1 ? 
+        <>
+          <div className="selection">
+            <h1>hello</h1>
+          </div>
+           {tables.map(table =>{
+              return <Table key={table._id} table={table}/>
+          })}
+        </> 
+        : <Error message="Something went wrong"/>
       }
       </div>
     </div>

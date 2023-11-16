@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Error() {
+function Error({message}) {
   return (
-    <div className="alert alert-danger alert-dismissible fade show" role="alert">
-  <strong>Oops!</strong> Something went wrong.
+    <div className="rounded-0 w-100 alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Oops!</strong> {message}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
   )
 }

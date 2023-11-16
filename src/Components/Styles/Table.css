@@ -2,10 +2,8 @@
 
 .main-container{
     font-family: 'Playfair Display', serif;
-    margin: 1rem;
-    padding: 1rem;
     width: inherit;
-    min-height: 100vh;
+    min-height: 120vh;
     max-height: auto;
 }
 
@@ -75,6 +73,11 @@
 .card .card-content .button .btn:hover{
     background: #eb5058;
     color: white;
+}
+
+
+.selection{
+    margin: 1rem;
 }
 
 
