@@ -18,7 +18,7 @@ function Booking() {
   function filterByDate(date, dateString){
     const dateMoment = moment(date).format("DD-MM-YYYY");
     console.log(dateMoment)
-    setDate(date);
+    setDate(dateMoment);
   };
 
   useEffect(() => {

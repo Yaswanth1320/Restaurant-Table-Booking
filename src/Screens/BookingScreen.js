@@ -6,7 +6,7 @@ import "./styles/BookingScreen.css";
 
 function BookingScreen() {
   const user = JSON.parse(localStorage.getItem("currentUser"));
-  const { id } = useParams();
+  const { id,date,members } = useParams();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
   const [table, setTable] = useState({});
@@ -48,17 +48,18 @@ function BookingScreen() {
             <div style={{"margin-bottom": "1.6rem"}}>
                 <h3>Booking details</h3>
                 <hr />
-                <p>Name: <span>{user.name}</span></p>
-                <p>Date: </p>
+                <p>Name: <span> {user.name}</span></p>
+                <p>Date: <span>{date}</span></p>
                 <p>Maxcount: <span>{table.maxcount}</span></p>
                 <p>Type: <span>{table.type}</span></p>
             </div>
             <div>
                   <h4>Amount</h4>
                   <hr />
-                  <p>Memebers: </p>
-                  <p>Reservation fees:</p>
-                  <button>Book Now</button>
+                  <p>Memebers: <span>{members}</span></p>
+                  <p>Reservation fees: <span>{table.cost*30/100*members}</span></p>
+                  <h4>Total Amount: <span>{table.cost*members}</span></h4>
+                  <button>Reserve Now</button>
             </div>
           </div>
         </div>

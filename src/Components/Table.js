@@ -6,8 +6,13 @@ import Carousel from "react-bootstrap/Carousel";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Table({ table }) {
+function Table({table, date}) {
   const [show, setShow] = useState(false);
+  const[members,setMembers] =useState(1);
+
+  function people(e) {
+   setMembers(e.target.value);
+  }
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -22,11 +27,15 @@ function Table({ table }) {
         <p style={{ color: "gray" }}>
           <strong>{table.features}</strong>
         </p>
-        <p>
-          <span>MaxCount:</span> {table.maxcount}
-        </p>
+        <div className="members">
+           <span> <p>Members: </p></span>
+            <input type="number" min={members} max={table.maxcount} onChange={people} />
+        </div>
         <p>
           <span>PhoneNumber:</span> {table.phonenumber}
+        </p>
+        <p>
+          <span>MaxCount:</span> {table.maxcount}
         </p>
         <p>
           <span>Type: </span>
@@ -36,7 +45,7 @@ function Table({ table }) {
           <button className="btn" onClick={handleShow}>
             View Details
           </button>
-          <Link to={`/book/${table._id}`}><Button className="btn">Book now</Button></Link>
+          <Link to={`/book/${table._id}/${date}/${members}`}><Button className="btn">Book now</Button></Link>
           <Modal show={show} onHide={handleClose} size="lg">
             <Modal.Header >
               <Modal.Title>{table.name}</Modal.Title>
