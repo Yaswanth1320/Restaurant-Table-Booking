@@ -82,7 +82,7 @@ export function MyBookings() {
                     <p>Total members: <span>{book.members}</span></p>
                     <p>Transaction Id: <span>{book.transactionid}</span></p>
                     <p>Status: <span>{book.status === 'booked'? "CONFORMED":"CANCELLED"}</span></p>
-                    
+                    <button>Cancel Booking</button>
                 </div>
             )
         })}
