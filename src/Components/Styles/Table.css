@@ -12,6 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
 }
 
 .card-container .card{
@@ -91,7 +92,24 @@
 
 
 .selection{
+    width: 70%;
     margin: 1rem;
+    display: flex;
+    gap: 3rem;
+    margin: 2rem;
+    padding: 2rem;
+    background-color: #fae6c9;
+    border-radius: 10px;
+}
+
+.selection select{
+    width: 200px;
+    padding: 0.3rem;
+}
+
+.selection input{
+    width: 500px;
+    padding: 0.5rem 1rem;
 }
 
 

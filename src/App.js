@@ -13,6 +13,7 @@ import Booking from './Components/Booking';
 import BookingScreen from './Screens/BookingScreen';
 import Signup from './Components/Signup';
 import Contact from './Components/Contact';
+import ProfileScreen from './Screens/ProfileScreen';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
         <Route path='contact' element={<Contact />} />
         <Route path='login' element={<Login />} />
         <Route path='signup' element={<Signup />} />
+        <Route path='profile' element={<ProfileScreen/>}/>
     </Route>
   )
 )

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
+// import StripeCheckout from 'react-stripe-checkout';
+import Swal from 'sweetalert2';
 import Loader from "../Components/Spinner/Loader";
 import "./styles/BookingScreen.css";
 
@@ -10,7 +12,8 @@ function BookingScreen() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
   const [table, setTable] = useState({});
-  console.log(table);
+  const totalamount = table.cost*members;
+  console.log(date);
 
   useEffect(() => {
     async function fetchData() {
@@ -29,6 +32,38 @@ function BookingScreen() {
 
     fetchData();
   }, [id]);
+
+  async function bookTable(){
+    const bookingDetails ={
+      table,
+      userid: JSON.parse(localStorage.getItem("currentUser"))._id,
+      date,
+      totalamount,
+      members
+    }
+
+    try {
+      setLoading(true)
+      const result = await axios.post('/api/booking/booktable', bookingDetails)
+      setLoading(false)
+      Swal.fire({
+        title: "Congratulations!",
+        text: "Your room booked successfully!",
+        icon: "Enjoy"
+      });
+      console.log(result)
+    } catch (error) {
+       setLoading(false)
+       Swal.fire("oops, something went wrong","error");
+       
+    }
+  }
+
+  // function onToken(token){
+  //     console.log(token)
+  // }
+
+  
 
   return (
     <div className="booking-container">
@@ -59,7 +94,14 @@ function BookingScreen() {
                   <p>Memebers: <span>{members}</span></p>
                   <p>Reservation fees: <span>{table.cost*30/100*members}</span></p>
                   <h4>Total Amount: <span>{table.cost*members}</span></h4>
-                  <button>Reserve Now</button>
+                  <button onClick={bookTable}>Reserve Now</button>
+
+                  {/* <StripeCheckout
+                  amount={table.cost*members*100}
+                  currency="INR"
+                  token={onToken}
+                  stripeKey="pk_test_51ODMqYSDkfp2vYdi1Xwf3AYeeZrcgrdlnrrTSU1EXsk9sfbAkLSIhxTEob0DQJ2Csc4EgVQbB3mbQdtIHKAGxoFU002W0ajg3i"
+                  ><button onClick={bookTable}>Reserve Now</button></StripeCheckout> */}
             </div>
           </div>
         </div>

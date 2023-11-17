@@ -38,8 +38,8 @@ function SharedLayout() {
                  <i className="fa-solid fa-user"></i>{user.name}
                 </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <Link className="dropdown-item user-drop">
-                    Bookings
+                  <Link to="profile" className="dropdown-item user-drop">
+                    Profile
                   </Link>
                   <Link className="dropdown-item user-drop" onClick={logout}>
                     LogOut

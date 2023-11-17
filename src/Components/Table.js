@@ -6,12 +6,12 @@ import Carousel from "react-bootstrap/Carousel";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Table({table, date}) {
+function Table({ table, date }) {
   const [show, setShow] = useState(false);
-  const[members,setMembers] =useState(1);
+  const [members, setMembers] = useState(1);
 
   function people(e) {
-   setMembers(e.target.value);
+    setMembers(e.target.value);
   }
 
   const handleClose = () => setShow(false);
@@ -28,8 +28,16 @@ function Table({table, date}) {
           <strong>{table.features}</strong>
         </p>
         <div className="members">
-           <span> <p>Members: </p></span>
-            <input type="number" min={members} max={table.maxcount} onChange={people} />
+          <span>
+            {" "}
+            <p>Members: </p>
+          </span>
+          <input
+            type="number"
+            min={members}
+            max={table.maxcount}
+            onChange={people}
+          />
         </div>
         <p>
           <span>PhoneNumber:</span> {table.phonenumber}
@@ -45,9 +53,13 @@ function Table({table, date}) {
           <button className="btn" onClick={handleShow}>
             View Details
           </button>
-          <Link to={`/book/${table._id}/${date}/${members}`}><Button className="btn">Book now</Button></Link>
+          {date && (
+            <Link to={`/book/${table._id}/${date}/${members}`}>
+              <Button className="btn">Book now</Button>
+            </Link>
+          )}
           <Modal show={show} onHide={handleClose} size="lg">
-            <Modal.Header >
+            <Modal.Header>
               <Modal.Title>{table.name}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
