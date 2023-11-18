@@ -16,6 +16,7 @@ function BookingScreen() {
   console.log(date);
 
   useEffect(() => {
+
     async function fetchData() {
       try {
         setLoading(true);
@@ -46,15 +47,11 @@ function BookingScreen() {
       setLoading(true)
       const result = await axios.post('/api/booking/booktable', bookingDetails)
       setLoading(false)
-      Swal.fire({
-        title: "Congratulations!",
-        text: "Your room booked successfully!",
-        icon: "Enjoy"
-      });
+      Swal.fire("Congratulations", "Your table has been booked", "success")
       console.log(result)
     } catch (error) {
        setLoading(false)
-       Swal.fire("oops, something went wrong","error");
+       Swal.fire("oops" ,"something went wrong","error");
        
     }
   }

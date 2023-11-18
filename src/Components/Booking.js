@@ -5,9 +5,6 @@ import { DatePicker } from "antd";
 import Table from "./Table";
 import "./Styles/Table.css";
 import Loader from "./Spinner/Loader";
-import Error from "./Spinner/Error";
-
-
 
 function Booking() {
   const [tables, setTables] = useState([]);
@@ -19,6 +16,11 @@ function Booking() {
 
   useEffect(() => {
     async function fetchData() {
+
+      if(!localStorage.getItem("currentUser")){
+          window.location='/login'
+      }
+
       try {
         setLoading(true);
         const data = (await axios.get("/api/tables/getalltables")).data;

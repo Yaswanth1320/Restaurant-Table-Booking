@@ -109,3 +109,9 @@
     color: white;
 }
 
+.status{
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 0.8rem !important;
+    color: white !important;
+    margin-right: 10px;
+}
