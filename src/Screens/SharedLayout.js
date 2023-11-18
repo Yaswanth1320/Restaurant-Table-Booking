@@ -1,15 +1,15 @@
 import React from "react";
 import "./styles/SharedLayout.css";
 import { Outlet } from "react-router";
-import { NavLink,Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Footer from "./Footer";
 
 function SharedLayout() {
   const user = JSON.parse(localStorage.getItem("currentUser"));
 
-  function logout(){
+  function logout() {
     localStorage.removeItem("currentUser");
-    window.location.href='/login';
+    window.location.href = "/login";
   }
 
   return (
@@ -35,12 +35,21 @@ function SharedLayout() {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                 <i className="fa-solid fa-user"></i>{user.name}
+                  <i className="fa-solid fa-user"></i>
+                  {user.name}
                 </button>
-                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div
+                  className="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton"
+                >
                   <Link to="profile" className="dropdown-item user-drop">
                     Profile
                   </Link>
+                  {user.isAdmin && (
+                    <Link to="admin" className="dropdown-item user-drop">
+                      Admin panel
+                    </Link>
+                  )}
                   <Link className="dropdown-item user-drop" onClick={logout}>
                     LogOut
                   </Link>

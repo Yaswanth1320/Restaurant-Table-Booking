@@ -90,3 +90,8 @@
     font-size: 1rem;
 }
 
+.dropdown-menu a{
+    font-size: 0.9rem !important;
+    margin-bottom: 10px !important;
+}
+

@@ -7,7 +7,7 @@ function Loader() {
     let [loading, setLoading] = useState(true);
 
   return (
-    <div style={{"height":"70vh","width":"100%","padding-top":"10rem"}}>
+    <div style={{"height":"70vh","padding-top":"10rem"}}>
       <ScaleLoader
         color='#eb5058'
         loading={loading}
