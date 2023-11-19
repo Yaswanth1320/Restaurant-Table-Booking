@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Loader from "../Components/Spinner/Loader";
 import Error from "../Components/Spinner/Error";
+import Swal from "sweetalert2";
 
 function AdminScreen() {
   useEffect(() => {
@@ -92,7 +93,7 @@ export function Bookings() {
 
   return (
     <div className="row">
-      <div className="col-md-12">
+      <div className="col-md-12 spinner">
         {loading && <Loader />}
         <table className="table table-bordered table-dark rounded-2">
           <thead>
@@ -148,7 +149,7 @@ export function Tables() {
 
   return (
     <div className="row ">
-      <div className="col-md-12">
+      <div className="col-md-12 spinner">
         {loading && <Loader />}
 
         <table className="table table-bordered table-dark rounded-2">
@@ -205,9 +206,8 @@ export function Users() {
 
   return (
     <div className="row">
-      <div className="col-md-12">
-        {loading && <Loader />}
-
+      <div className="col-md-12 spinner">
+      {loading && <Loader />}
         <table className="table table-bordered table-dark rounded-2">
           <thead>
             <tr>
@@ -237,6 +237,7 @@ export function Users() {
 }
 
 export function AddTable() {
+  const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [cost, setCost] = useState();
   const [maxcount, setCount] = useState();
@@ -248,99 +249,110 @@ export function AddTable() {
   const [imgUrl2, setImgUrl2] = useState();
   const [imgUrl3, setImgUrl3] = useState();
 
+  async function addTable() {
+    const newTable = {
+      name,
+      cost,
+      maxcount,
+      desc,
+      phonenumber,
+      type,
+      features,
+      imgUrls: [imgUrl1, imgUrl2, imgUrl3],
+    };
 
- async function addTable(){
-
-    const newTable ={
-        name,
-        cost,
-        maxcount,
-        desc,
-        phonenumber,
-        type,
-        features,
-        imgUrls: [imgUrl1,imgUrl2,imgUrl3]
+    try {
+      setLoading(true);
+      const result = (await axios.post("/api/tables/addtable", newTable)).data;
+      console.log(result);
+      setLoading(false);
+      Swal.fire(
+        "Congarts",
+        "Your new table has been added successfully",
+        "success"
+      ).then((result) => {
+        window.location.reload();
+      });
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+      Swal.fire("Oops", "Something happen table not added", "error");
     }
-
-      try {
-          const result = (await axios.post('/api/tables/addtable', newTable)).data
-          console.log(result)
-      } catch (error) {
-          console.log(error)
-      }
-
   }
 
   return (
-    <div className="admin-comtainer">
-      <div className="admin-input">
-        <div className="sub">
-          <input
-            type="text"
-            placeholder="Name of the resturant"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="number"
-            placeholder="Cost"
-            value={cost}
-            onChange={(e) => setCost(e.target.value)}
-          />
-          <input
-            type="number"
-            placeholder="Maxcount"
-            value={maxcount}
-            onChange={(e) => setCount(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Description"
-            value={desc}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-          <input
-            type="number"
-            placeholder="Phone Number"
-            value={phonenumber}
-            onChange={(e) => setPhonenumber(e.target.value)}
-          />
+    <div className="spinner">
+      {loading && <Loader />}
+      <div className="admin-comtainer">
+        <div className="admin-input">
+          <div className="sub">
+            <input
+              type="text"
+              placeholder="Name of the resturant"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              type="number"
+              placeholder="Cost"
+              value={cost}
+              onChange={(e) => setCost(e.target.value)}
+            />
+            <input
+              type="number"
+              placeholder="Maxcount"
+              value={maxcount}
+              onChange={(e) => setCount(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Description"
+              value={desc}
+              onChange={(e) => setDescription(e.target.value)}
+            />
+            <input
+              type="number"
+              placeholder="Phone Number"
+              value={phonenumber}
+              onChange={(e) => setPhonenumber(e.target.value)}
+            />
+          </div>
+          <div className="sub">
+            <input
+              type="text"
+              placeholder="Type"
+              value={type}
+              onChange={(e) => setType(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Features"
+              value={features}
+              onChange={(e) => setFeatures(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="ImageUrl 1"
+              value={imgUrl1}
+              onChange={(e) => setImgUrl1(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="ImageUrl 2"
+              value={imgUrl2}
+              onChange={(e) => setImgUrl2(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="ImageUrl 3"
+              value={imgUrl3}
+              onChange={(e) => setImgUrl3(e.target.value)}
+            />
+          </div>
         </div>
-        <div className="sub">
-          <input
-            type="text"
-            placeholder="Type"
-            value={type}
-            onChange={(e) => setType(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Features"
-            value={features}
-            onChange={(e) => setFeatures(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="ImageUrl 1"
-            value={imgUrl1}
-            onChange={(e) => setImgUrl1(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="ImageUrl 2"
-            value={imgUrl2}
-            onChange={(e) => setImgUrl2(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="ImageUrl 3"
-            value={imgUrl3}
-            onChange={(e) => setImgUrl3(e.target.value)}
-          />
+        <div className="button">
+          <button onClick={addTable}>Add Table</button>
         </div>
-      </div>
-      <div className="button">
-        <button onClick={addTable}>Add Table</button>
       </div>
     </div>
   );

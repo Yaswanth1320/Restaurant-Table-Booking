@@ -6,6 +6,13 @@
     width: 100%;
 }
 
+.spinner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
 .admin-container .admin-heading h1{
     font-family: 'Orbitron', sans-serif;
     font-size: 3.5rem;
