@@ -109,7 +109,7 @@ export function Bookings() {
             {bookings.length &&
               bookings.map((booking) => {
                 return (
-                  <tr>
+                  <tr key={booking._id}>
                     <td>{booking._id}</td>
                     <td>{booking.userid}</td>
                     <td>{booking.table}</td>
@@ -239,8 +239,8 @@ export function Users() {
 export function AddTable() {
   const [name, setName] = useState("");
   const [cost, setCost] = useState();
-  const [count, setCount] = useState();
-  const [description, setDescription] = useState();
+  const [maxcount, setCount] = useState();
+  const [desc, setDescription] = useState();
   const [phonenumber, setPhonenumber] = useState();
   const [type, setType] = useState();
   const [features, setFeatures] = useState();
@@ -249,19 +249,26 @@ export function AddTable() {
   const [imgUrl3, setImgUrl3] = useState();
 
 
-  function addTable(){
+ async function addTable(){
 
     const newTable ={
         name,
         cost,
-        count,
-        description,
+        maxcount,
+        desc,
         phonenumber,
         type,
         features,
-        imgUrl1: [imgUrl1,imgUrl2,imgUrl3]
+        imgUrls: [imgUrl1,imgUrl2,imgUrl3]
     }
-    console.log(newTable)
+
+      try {
+          const result = (await axios.post('/api/tables/addtable', newTable)).data
+          console.log(result)
+      } catch (error) {
+          console.log(error)
+      }
+
   }
 
   return (
@@ -275,25 +282,25 @@ export function AddTable() {
             onChange={(e) => setName(e.target.value)}
           />
           <input
-            type="text"
+            type="number"
             placeholder="Cost"
             value={cost}
             onChange={(e) => setCost(e.target.value)}
           />
           <input
-            type="text"
+            type="number"
             placeholder="Maxcount"
-            value={count}
+            value={maxcount}
             onChange={(e) => setCount(e.target.value)}
           />
           <input
             type="text"
             placeholder="Description"
-            value={description}
+            value={desc}
             onChange={(e) => setDescription(e.target.value)}
           />
           <input
-            type="text"
+            type="number"
             placeholder="Phone Number"
             value={phonenumber}
             onChange={(e) => setPhonenumber(e.target.value)}
