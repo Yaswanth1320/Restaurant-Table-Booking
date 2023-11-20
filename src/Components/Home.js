@@ -15,7 +15,7 @@ function Home() {
       <div className="home-container">
         <div className="home-content">
           <h2>Delightfull Experience</h2>
-          <h1>Welcome to 'Retro Restaurant'</h1>
+          <h1>Welcome to 'Retro Restaurants'</h1>
           <Link to="book" className="home-button">
             Reservation
           </Link>
