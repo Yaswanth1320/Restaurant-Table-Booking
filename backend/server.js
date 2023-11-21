@@ -1,12 +1,5 @@
 const express = require("express");
-const cors = require("cors")
 const app = express();
-
-app.use(cors({
-    origin:[],
-    methods: ["POST","GET"],
-    credential: true
-}));
 
 const dbConfig = require("./db.js");
 const tablesRoute = require("./routers/tablesRoutes.js");
